@@ -1,0 +1,74 @@
+/* Базовые стили (подход «mobile first» или «desktop first» – выбираете сами) */
+
+/* Общие стили для всех устройств */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center; /* По центру */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ddd; /* можно заменить на фон-картинку */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.info {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+/* --- Медиазапросы для более широких экранов --- */
+@media (min-width: 768px) {
+  /* Пример: меняем расположение навигации, размер шрифта, отступы и т. д. */
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    padding: 100px 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Пример: для десктопа ещё больше меняем структуру */
+  .info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .info p {
+    max-width: 400px;
+  }
+}
